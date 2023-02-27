@@ -2,6 +2,8 @@
 
 data/
 out/
+saved/
+*.pt
 
 __pycache__/
 *.py[cod]

@@ -53,7 +53,30 @@ def gen_candidate_papers(role="test"):
     utils.dump_json(venue_year_to_candidates, "data/", "venue_year_to_candidates_{}.json".format(role))
 
 
+def extract_graph():
+    data = utils.load_json("data/", "dpv12_last.json")
+    ref_list=[]
+
+    for index,da in enumerate(tqdm(data)):
+        res=da['references_index']
+        ref_dic={}
+        if len(res)!=0:
+            ref_dic['index']=da['index']
+            ref_dic['references_index']=res
+            ref_list.append(ref_dic)
+            
+    os.makedirs("data/graph/", exist_ok=True)
+    cita=[]
+    with open('data/graph/graph.txt','w')as fo2:
+        for i in tqdm(ref_list):
+            id=str(i['index'])
+            for j in i['references_index']:
+                cita.append(str(j)+' '+id+'\n')
+        fo2.writelines(cita)
+
+
 if __name__ == "__main__":
-    gen_candidate_papers(role="train")
-    gen_candidate_papers(role="valid")
-    gen_candidate_papers(role="test")
+    # gen_candidate_papers(role="train")
+    # gen_candidate_papers(role="valid")
+    # gen_candidate_papers(role="test")
+    extract_graph()
