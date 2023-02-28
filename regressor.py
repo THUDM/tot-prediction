@@ -210,5 +210,5 @@ def train_and_predict_classifier():
 
 
 if __name__ == "__main__":
-    # gen_classifier_features_train()
+    gen_classifier_features_train()
     train_and_predict_classifier()

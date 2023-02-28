@@ -76,7 +76,7 @@ def extract_graph():
 
 
 if __name__ == "__main__":
-    # gen_candidate_papers(role="train")
-    # gen_candidate_papers(role="valid")
-    # gen_candidate_papers(role="test")
+    gen_candidate_papers(role="train")
+    gen_candidate_papers(role="valid")
+    gen_candidate_papers(role="test")
     extract_graph()
