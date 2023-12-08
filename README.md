@@ -24,7 +24,7 @@ pip install -r requirements.txt
 ```
 
 ## Dataset
-The dataset can be downloaded from [BaiduPan](https://pan.baidu.com/s/1ixgOizcJCBwNF_wNNQsvkQ?pwd=f62u) with password f62u.
+The dataset can be downloaded from [BaiduPan](https://pan.baidu.com/s/1ixgOizcJCBwNF_wNNQsvkQ?pwd=f62u) with password f62u or [Aliyun](https://open-data-set.oss-cn-beijing.aliyuncs.com/oag-benchmark/influence-prediction/paper-tot-prediction/data.zip).
 Please put the _data_ folder into the project directory.
 
 ## How to Run
