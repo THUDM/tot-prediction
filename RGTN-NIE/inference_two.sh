@@ -1,0 +1,15 @@
+python inference_two.py \
+    --dataset FB15k_rel_two \
+    --data_path datasets/tot_data.pk \
+    --loss-lambda 0.8 \
+    --num-hidden 8 \
+    --num-heads 8 \
+    --spm \
+    --residual \
+    --norm \
+    --loss-alpha 0.3 \
+    --list-num 100 \
+    --gpu 3 \
+    --output_dir /home/zhangfanjin/ssj/RGTN-NIE/results/FB15k_rel_two_inf \
+    --cross_id 1 \
+    --model_path /home/zhangfanjin/ssj/RGTN-NIE/results/FB15k_rel_two_RGTN/1_gtran-list-3-100_checkpoint.pt
